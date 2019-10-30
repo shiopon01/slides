@@ -70,7 +70,7 @@ JavaScritpの実行もする。
   - 画面表示
 - JavaScriptエンジン
 
-![bg left](images/google.com.png)
+![bg left](images/001/google.com.png)
 
 ---
 
@@ -91,7 +91,7 @@ document.getElementById('foo')
 $('#bar').innerHTML = 'sample'
 ```
 
-![bg left 90%](images/dom.png)
+![bg left 90%](images/001/dom.png)
 
 ---
 
@@ -116,7 +116,7 @@ $('#bar').innerHTML = 'sample'
 
 <!-- W3Schoolsによるウェブブラウザの利用統計 -->
 
-![bg width:98% ](images/browsershare.png)
+![bg width:98% ](images/001/browsershare.png)
 
 ---
 
@@ -133,7 +133,7 @@ JavaScriptは無効に設定！
 
 WebアプリはLAMPが最強
 
-![bg left 51%](images/browser2004.png)
+![bg left 51%](images/001/browser2004.png)
 
 ---
 
@@ -146,7 +146,7 @@ WebアプリはLAMPが最強
 
 2005年にGoogle Mapsが登場。
 
-![bg left 34%](images/browser2006.png)
+![bg left 34%](images/001/browser2006.png)
 
 ---
 
@@ -206,7 +206,7 @@ $('#hoge')
 
 タブブラウジング、フィードリーダー、自前のレンダリングエンジン搭載のような独自機能を追加したブラウザがたくさん生まれた。
 
-![bg left 50%](images/browser2009.png)
+![bg left 50%](images/001/browser2009.png)
 
 ---
 
@@ -222,7 +222,7 @@ $('#hoge')
 CSS3のメディアクエリ `@media`
 → レスポンシブデザインが主流
 
-![bg left 48%](images/browser2012.png)
+![bg left 48%](images/001/browser2012.png)
 
 ---
 
@@ -266,7 +266,7 @@ jQuery + Single Page Application…？
 Reactの台等もあり、SPA +
 APIサーバーのアプリが主流に
 
-![bg left 59%](images/browser2016.png)
+![bg left 59%](images/001/browser2016.png)
 
 ---
 
@@ -281,7 +281,7 @@ APIサーバーのアプリが主流に
 jQueryを使って自分でDOMを
 操作しなくていい時代が到来！
 
-![bg right 100%](images/react.png)
+![bg right 100%](images/001/react.png)
 
 ---
 
