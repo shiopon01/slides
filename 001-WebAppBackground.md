@@ -26,11 +26,7 @@ _class: lead
 
 ## 最近のWebアプリ開発事情、棚卸し
 
-Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて
-
----
-
-## Webアプリ開発事情、棚卸し
+Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて開発事情、棚卸し
 
 - フロントエンドWebアプリフレームワーク（React、Vue、Angular）
 - バックエンドWebアプリフレームワーク（Laravel、Rails、Express）
