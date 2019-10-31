@@ -11,22 +11,17 @@ _class: lead
 
 ---
 
-## この資料について
-
-- 目的
-  - Webについて分かった気にさせる
-    - 前編：Webを振り返って技術の流れを把握する
-    - 後編：TCP、HTTPについての理解を深める
-
----
-
 <!--_class: lead -->
 
 最初に
 
-## 最近のWebアプリ開発事情、棚卸し
+## 最近のWebアプリ開発事情を棚卸し
 
-Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて開発事情、棚卸し
+Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて
+
+---
+
+## 最近のWebアプリ開発事情
 
 - フロントエンドWebアプリフレームワーク（React、Vue、Angular）
 - バックエンドWebアプリフレームワーク（Laravel、Rails、Express）
@@ -36,19 +31,35 @@ Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて�
 - プロトコル（SSL/TLS、HTTPS、gRPC）
 - …
 
-**↑ 混沌**
+**↑ 混沌**（この内容はほとんど出てきません）
+
+---
+
+## この資料について
+
+- 目的
+  - Webについて分かった気にさせる
+    - 前編：Webを振り返って技術の流れを把握する
+    - 後編：HTTP、TCPについての理解を深める
 
 ---
 
 ## このスライドの内容
 
-- 前編
+- 前編：Webを振り返って技術の流れを把握する
   - ブラウザの仕事
   - ブラウザとWeb技術の移り変わり
-- 後編
-  - ？
+- 後編：HTTP、TCPについての理解を深める
+  - HTTP、TCPを知る
+  - HTTP/1通信一連の流れ
 
 - まとめ
+
+---
+
+<!--_class: lead -->
+
+## 前編：Webを振り返って技術の流れを把握する
 
 ---
 
@@ -152,16 +163,16 @@ WebアプリはLAMPが最強
 
 ## 2005年：XMLHttpRequest（Ajax）
 
-ウェブブラウザのスクリプト言語（JavaScriptなど）から
+Webブラウザのスクリプト言語（JavaScriptなど）から
 サーバとHTTP通信を行うためのに用意されたブラウザのAPI。
 
-Goole MapsでXMLHttpRequestが一躍有名になり、
+Goole MapsでXMLHttpRequestが有名になり、
 Ajaxという言葉が生まれる。（Asynchronous JavaScript + XML）
 
 しかしまだクライアントプログラミングの敷居は高い…。
 
 .
-※ ウェブブラウザのスクリプト言語
+※ ほかのWebブラウザのスクリプト言語
 　Javaアプレット、VBScript、JScript、ActionScript、Silverlight環境など
 
 ---
@@ -213,10 +224,10 @@ $('#hoge')
 ## 〜2012年
 
 - IE（IE 9、10）完全に下火
-- Google Chrome躍進
 - HTML5/CSS3の対応が進む
   - WebSocketが登場
 - FuelPHP、Laravelはこのへん
+
 - **クラウド**ブーム
 
 CSS3のメディアクエリ `@media`
@@ -308,3 +319,61 @@ Reactが内部でdiff/patchしてくれるため、直接DOMを触る必要が�
   - Ajax、jQuery
   - SPA、React
   - 主要なWeb技術の登場シーン
+
+---
+
+<!--_class: lead -->
+
+## 後編：HTTP、TCPについての理解を深める
+
+---
+
+<!--_class: lead -->
+
+## HTTP、TCPを知る
+
+---
+
+## HTTP
+
+主にWebでブラウザ・サーバー間の通信に使われる**プロトコル**。
+
+- http://example.com
+- https://google.com
+
+https（HTTP Secure）はHTTPの暗号化通信をするやつ。
+（最近のブラウザは `http` だと怒る
+
+![width:1000](images/001/http.png)
+
+---
+
+## プロトコル？
+
+現代のネットワーク技術を説明するにはレイヤーという概念がとても便利。
+プロトコルの仕事を分けた **TCP/IP 4階層モデル** などが存在する。
+
+階層|担当|プロトコル例
+--|--|--
+アプリケーション層|アプリ|**HTTP**, TLS, SMTP, DNS
+トランスポート層|OS|**TCP**, UDP
+インターネット層|OS|IP（IPv4、IPv6）
+ネットワークインターフェイス層|ドライバー|Ethernet, Wifi, PPP
+
+---
+
+## ！！何か切らないと…
+
+- POSIX
+- ファイルディスクリプター
+- プロセスディスクリプター
+- システムコール、シグナル
+- ソケット通信
+
+---
+
+<!--_class: lead -->
+
+## HTTP通信一連の流れ
+
+？
