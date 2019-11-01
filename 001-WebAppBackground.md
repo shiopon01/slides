@@ -423,13 +423,13 @@ https（HTTP Secure）はHTTPの暗号化通信をするやつ。
 ヘッダー1: ヘッダーの値[改行]
 ヘッダー2: ヘッダーの値[改行]
 [改行]
-リクエストボディー（あれば）
+リクエストボディ（あれば）
 ```
 
 - メソッド：GET、POST、PUT、DELETE、PATCH、HEAD、OPTION
 - パス：`/` 、`/index.html`、`/favicon.ico` などのパス
 - ヘッダー： `Host`、`Accept`、`Connection`、`User-Agent` などの設定値
-- リクエストボディー：POST、PUTなどでリクエストボディーが必要な場合
+- リクエストボディ：POST、PUTなどでリクエストボディが必要な場合
 
 ---
 
@@ -466,9 +466,8 @@ HTTP/バージョン ステータスコード（数値） ステータスコー�
 ```
 
 - ステータスコード：`200 OK`、`400 Bad Request`などの決められたコード
-- パス：`/` 、`/index.html`、`/favicon.ico` などのパス
-- ヘッダー： `Host`、`Accept`、`Connection`、`User-Agent` などの設定値
-- リクエストボディー：POST、PUTなどでリクエストボディーが必要な場合
+- ヘッダー： `Content-Type`、`Content-Length`、`Date` などの設定値
+- サーバーレスポンス：HTMLやJSON、画像のバイナリデータなど
 
 ---
 
@@ -494,7 +493,7 @@ HTTPレスポンスの書式はGETやPOSTによって変化することがない
 
 HTTP通信の流れ
 
-![bg 68%](images/001/http_flow.png)
+![bg 57%](images/001/http_flow.png)
 
 ---
 
