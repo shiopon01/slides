@@ -44,22 +44,13 @@ Webアプリ開発？　→　HTTPに乗るもの、関連するものすべて
 
 ---
 
-## このスライドの内容
-
-- 前編：Webを振り返って技術の流れを把握する
-  - ブラウザの仕事
-  - ブラウザとWeb技術の移り変わり
-- 後編：HTTP、TCPについての理解を深める
-  - HTTP、TCPを知る
-  - HTTP通信の流れ
-
-- まとめ
-
----
-
 <!--_class: lead -->
 
 ## 前編：Webを振り返って技術の流れを把握する
+
+①ブラウザの仕事
+
+②ブラウザとWeb技術の移り変わり
 
 ---
 
@@ -326,6 +317,10 @@ Reactが内部でdiff/patchしてくれるため、直接DOMを触る必要が�
 
 ## 後編：HTTP、TCPについての理解を深める
 
+①HTTP、TCPを知る
+
+②もっとTCPを知る
+
 ---
 
 <!--_class: lead -->
@@ -344,7 +339,7 @@ Reactが内部でdiff/patchしてくれるため、直接DOMを触る必要が�
 https（HTTP Secure）はHTTPの暗号化通信をするやつ。
 （最近のブラウザは `http` だと怒る
 
-![width:1000](images/001/example.com.png)
+![width:900](images/001/example.com.png)
 
 ---
 
@@ -396,15 +391,16 @@ https（HTTP Secure）はHTTPの暗号化通信をするやつ。
 
 ## HTTP通信
 
-- HTTPはTCPの上に乗るプロトコル
+- HTTPはTCPの上に乗るプロトコル（今後登場するHTTP/3はUDP）
 - HTTPリクエスト/レスポンスの書式、ヘッダーの項目などを定めている
 
 - **データ通信のプロトコルではなく、**
-  **送受信するデータをどう解釈するかを定めたプロトコル**
+  **送受信するデータをどう解釈するか定めたプロトコル**
   （インターネット間のデータ通信自体はTCP/IPで行われる）
   - どう解釈するかは使用するWebサーバーの実装次第
 
-基本はHTTPリクエストを送り、HTTPレスポンスを受け取る1往復の通信
+基本はHTTPリクエストを送り、HTTPレスポンスを受け取る1往復の通信。
+（リクエスト/レスポンスは書式通りに書かれた1つのファイルのようなもの）
 
 ---
 
@@ -412,9 +408,99 @@ https（HTTP Secure）はHTTPの暗号化通信をするやつ。
 
 ---
 
-## （悪い例）
+（悪い例。ただし、
+　内容の解釈に
+　支障はないはず）
 
 ![bg 75%](images/001/http_bad.png)
+
+---
+
+## HTTPリクエスト書式
+
+```text
+メソッド パス HTTP/バージョン[改行]
+ヘッダー1: ヘッダーの値[改行]
+ヘッダー2: ヘッダーの値[改行]
+[改行]
+リクエストボディー（あれば）
+```
+
+- メソッド：GET、POST、PUT、DELETE、PATCH、HEAD、OPTION
+- パス：`/` 、`/index.html`、`/favicon.ico` などのパス
+- ヘッダー： `Host`、`Accept`、`Connection`、`User-Agent` などの設定値
+- リクエストボディー：POST、PUTなどでリクエストボディーが必要な場合
+
+---
+
+## HTTPリクエスト例
+
+```text
+GET / HTTP/1.1
+Host: example.com
+User-Agent: curl/7.58.0
+Accept: */*
+```
+
+```text
+POST / HTTP/1.1
+Host: example.com
+User-Agent: curl/7.58.0
+Accept: */*
+Content-Length: 20
+Content-Type: application/json
+
+{"message": "hello."}
+```
+
+---
+
+## HTTPレスポンス書式
+
+```text
+HTTP/バージョン ステータスコード（数値） ステータスコード（文字） [改行]
+ヘッダー1: ヘッダーの値[改行]
+ヘッダー2: ヘッダーの値[改行]
+[改行]
+サーバーレスポンス
+```
+
+- ステータスコード：`200 OK`、`400 Bad Request`などの決められたコード
+- パス：`/` 、`/index.html`、`/favicon.ico` などのパス
+- ヘッダー： `Host`、`Accept`、`Connection`、`User-Agent` などの設定値
+- リクエストボディー：POST、PUTなどでリクエストボディーが必要な場合
+
+---
+
+## HTTPレスポンス例
+
+```text
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 01 Nov 2019 04:40:07 GMT
+Content-Length: 1256
+...
+
+<!doctype html>
+<html>
+<head>
+...
+```
+
+HTTPレスポンスの書式はGETやPOSTによって変化することがない。
+（サーバーレスポンスは多くの場合に存在するが、ない場合もある）
+
+---
+
+HTTP通信の流れ
+
+![bg 68%](images/001/http_flow.png)
+
+---
+
+<!--_class: lead -->
+
+## もっとTCPを知る
 
 ---
 
@@ -432,6 +518,4 @@ https（HTTP Secure）はHTTPの暗号化通信をするやつ。
 
 <!--_class: lead -->
 
-## HTTP通信一連の流れ
-
-？
+## まとめ
