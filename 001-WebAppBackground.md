@@ -4,10 +4,14 @@ marp: true
 
 <!--
 theme: gaia
+_footer: © 2019 shion.ueda
 _class: lead
 -->
 
 # Webの振り返りとHTTP
+
+2019-11-05
+shion.ueda
 
 ---
 
