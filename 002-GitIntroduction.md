@@ -4,10 +4,14 @@ marp: true
 
 <!--
 theme: gaia
+_footer: © 2019 shion.ueda
 _class: lead
 -->
 
 # 歴史から知るバージョン管理システム
+
+2019-00-00（WIP）
+shion.ueda
 
 ---
 
