@@ -5,7 +5,7 @@
 PDFへの変換
 
 ```sh
-npx @marp-team/marp-cli --pdf --allow-local-files -o out/001-WebAppBackground.pdf  ./001-WebAppBackground.md
+npx @marp-team/marp-cli --pdf --allow-local-files -o out/001-WebAppBackground.pdf ./001-WebAppBackground.md
 ```
 
 ## 参考リンク
