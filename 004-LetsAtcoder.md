@@ -47,6 +47,14 @@ https://atcoder.jp/
 競技プログラミングはプログラミングコンテストの中でもとくに、
 **アルゴリズム系の問題を短時間で解くタイプ** のものを言う。
 
+コンテストに参加すると自分の **レート** が変動します。（モチベーション）
+
+---
+
+### レーティングシステム
+
+![bg 85%](images/004/rating.png)
+
 ---
 
 ### コンテストの流れ①コンテストに参加する
@@ -487,5 +495,16 @@ https://gist.github.com/shiopon01/790d6fedcb19e8de41df5216bb4e5665
 
 ---
 
+<!--_class: lead -->
+
 ## おわりに
 
+---
+
+## おわりに
+
+- AtCoder Problemsというサイトで今までの過去問を閲覧できます
+  - https://kenkoooo.com/atcoder#/table/
+  - https://kenkoooo.com/atcoder#/table/自分のID でクリア済み過去問、未クリア過去問が色分けされるのも良いです。埋めていきましょう！
+- AtCoderの問題をローカルで解いてローカルでテストを実行し、答えだけAtCoderに提出できる環境を構築する記事があります（楽になります）
+  - https://shiopon.hatenablog.jp/entry/2020/01/16/182901
