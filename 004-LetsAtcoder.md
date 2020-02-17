@@ -18,9 +18,9 @@ shion.ueda
 ## 目次
 
 - 競技プログラミングとは
-- 例題
-- なんか
-- 幅優先探索（BFS）
+- 例題を解いてみる
+- 最短路問題を解いてみる
+- おわりに
 
 ---
 
@@ -36,7 +36,7 @@ hogehoge
 
 <!--_class: lead -->
 
-## 例題
+## 例題を解いてみる
 
 ---
 
@@ -102,7 +102,7 @@ func main() {
 
 <!--_class: lead -->
 
-## 最短路問題
+## 最短路問題を解いてみる
 
 ---
 
@@ -217,7 +217,7 @@ func main() {
 <br>
 
 答え：
-**G** の最短距離は **11**
+**G** への最短距離は **11**
 
 ![bg 50%](images/004/meiro.png)
 
@@ -343,4 +343,90 @@ https://atcoder.jp/contests/abc007/tasks/abc007_3
 
 ---
 
-## 解答例
+## 解答例（Go言語）
+
+```go
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+type Pair struct {
+	x, y int
+}
+
+// ↑→↓←
+var dy [4]int = [4]int{-1, 0, 1, 0}
+var dx [4]int = [4]int{0, 1, 0, -1}
+```
+
+---
+
+### 入力の受け取りと、Queueや最短路記録配列の準備
+
+```go
+func main() {
+	// 入力を受け取る
+	var r, c, sy, sx, gy, gx int
+	fmt.Scan(&r, &c, &sy, &sx, &gy, &gx)
+	stage := make([][]string, r)
+	for i := 0; i < r; i++ {
+		var tmp string
+		fmt.Scan(&tmp)
+		stage[i] = strings.Split(tmp, "")
+	}
+
+	// Queueの準備
+	que := make([]Pair, 0)
+	que = append(que, Pair{x: sx - 1, y: sy - 1})
+	// 最短路を記録する配列の準備
+	var dist [49][49]int // R(1≦R≦50), C(1≦C≦50)
+```
+
+---
+
+### BFSを行うループのスタート
+
+```go
+	// Queueの中が空になるまで繰り返し
+	for len(que) > 0 {
+		// Queueからひとつ取り出す
+		point := que[0]
+		que = que[1:]
+
+		// 上下左右のマスを調べる（dx,dy配列があると4ループで調べられる！）
+		for i := 0; i < 4; i++ {
+			nx, ny := point.x+dx[i], point.y+dy[i]
+
+			// nx, nyがマイナス値など想定しない数値になった時、
+			// または次の場所が壁か探索済みの時はスキップ
+			if (nx < 0 && c <= nx && ny < 0 && r <= ny) ||
+				(stage[ny][nx] == "#" || dist[ny][nx] != 0) {
+				continue
+			}
+```
+
+---
+
+```go
+			// 探索する場所が未探索のマスだった場合、
+			// Queueに追加して最短路を記録する！
+			que = append(que, Pair{x: nx, y: ny})
+			dist[ny][nx] = dist[point.y][point.x] + 1
+		}
+	}
+
+	// 結果を出力
+	fmt.Println(dist[gy-1][gx-1])
+}
+```
+
+このコードで迷路の最短路を求めることができる。
+
+QueueをStackにするだけでDFS（深さ優先探索）になり、
+**迷路のスタート地点がゴール地点と繋がっているか**を調べることができる。
+
+---
+
