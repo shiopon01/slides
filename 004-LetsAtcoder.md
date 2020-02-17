@@ -10,7 +10,7 @@ _class: lead
 
 # 今日から始めるAtCoder
 
-2020-2-00（WIP）
+2020-2-17
 shion.ueda
 
 ---
@@ -501,10 +501,44 @@ https://gist.github.com/shiopon01/790d6fedcb19e8de41df5216bb4e5665
 
 ---
 
-## おわりに
+### 参考書籍①
 
-- AtCoder Problemsというサイトで今までの過去問を閲覧できます
+#### プログラミングコンテストチャレンジブック [第2版]
+
+通称 **蟻本**。競技プログラマーのバイブル。界隈では超有名な本。
+
+かなり難しく、中〜上級者向けの内容。
+
+https://amazon.co.jp/dp/B00CY9256C
+
+![bg right h:100%](images/004/aribook.jpg)
+
+---
+
+### 参考書籍②
+
+#### プログラミングコンテスト攻略のためのアルゴリズムとデータ構造
+
+通称 **螺旋本**。大切なものはすべてここに詰まっている。。。
+
+蟻本に比べると易しく、読みやすい。初〜中級者向けの内容。
+
+https://amazon.co.jp/dp/B00U5MVXZO
+
+![bg right h:100%](images/004/databook.jpg)
+
+---
+
+![bg h:98%](images/004/chokudai.png)
+
+---
+
+### リンク集
+
+- AtCoder
+  - https://atcoder.jp/
+- AtCoder Problemsという有志のサイトで今までの過去問を閲覧できます
   - https://kenkoooo.com/atcoder#/table/
   - https://kenkoooo.com/atcoder#/table/自分のID でクリア済み過去問、未クリア過去問が色分けされるのも良いです。埋めていきましょう！
-- AtCoderの問題をローカルで解いてローカルでテストを実行し、答えだけAtCoderに提出できる環境を構築する記事があります（楽になります）
+- AtCoderの問題をローカルで解いてローカルでテストを実行し、答えだけAtCoderに提出する環境を構築する記事があります（楽になります）
   - https://shiopon.hatenablog.jp/entry/2020/01/16/182901
